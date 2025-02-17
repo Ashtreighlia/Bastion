@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Jacquard+12&family=Jacquard+24&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --main-color: hsl(338, 100%, 63%);
+  --main-color_2: hsl(338, 90%, 55%);
+  --main-color_3: hsl(338, 80%, 50%);
+  --main-color_4: hsl(338, 70%, 45%);
+  --main-color_5: hsl(338, 60%, 40%);
+  --main-color_6: hsl(338, 50%, 35%);
+
+  --heading-color: hsl(338, 100%, 63%);
+  --text-color: #ddd;
+  --text-color_2: #aaa;
+
+  --link-color: hsl(338, 100%, 63%);
+
+  --background-color: #111;
+  --background-color_2: #222;
+  --background-color_3: #333;
+  --background-color_4: #444;
+
+  --shadow: #000;
+}
+
+body {
+  background-color: var(--background-color);
+  image-rendering: pixelated;
+  margin: auto;
+  width: 960px;
+  overflow-x: hidden;
+
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
+img {
+  width: 100%;
+}
+
+/* style of headings and text */
+h1 {
+  font-size: 12rem;
+  text-align: center;
+  text-shadow: 0rem 0rem 4rem var(--shadow);
+  margin: 0;
+}
+
+h2 {
+  border: 4px none var(--main-color_2);
+  padding: 2rem;
+  border-bottom-style: dashed;
+  font-size: 3.5rem;
+  text-shadow: 0rem 0rem 1rem var(--shadow);
+}
+
+h3 {
+  font-size: 2.5em;
+  text-shadow: 0rem 0rem 1rem var(--shadow);
+}
+
+h4 {
+  font-size: 2em;
+  text-shadow: 0rem 0rem 1rem var(--background-color);
+}
+
+h5{
+  font-size: 1.5em;
+  text-shadow: 0rem 0rem 1rem var(--background-color);
+}
+
+h6{
+  font-size: 1.25em;
+  text-shadow: 0rem 0rem 1rem var(--background-color);
+}
+
+p {
+  color: var(--text-color);
+  font-family: "Fira Code";
+  font-size: 1em;
+  letter-spacing: -0.5px;
+  line-height: 1.25em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  line-height: 0em;
+  font-family: "Jacquard 24";
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-family: "Fira Code";
+  font-weight: bold;
+}
+
+button {
+  background-color: var(--background-color_4);
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  color: var(--main-color);
+  font-family: "Fira Code";
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 15px 10px 15px;
+}
+
+button:hover {
+  background-color: var(--background-color);
+  transition-duration: 125ms;
+}
+
+/* style of navbar */
+nav{
+  float: left;
+  left: 0;
+  position: fixed;
+  top: 50px;
+}
+
+nav a{
+  background-color: var(--background-color_4);
+  color: var(--main-color);
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 2em;
+  padding: 10px 25px 10px 15px;
+  text-decoration: none;
+}
+
+nav div{
+  padding-top: 10px;
+}
+
+nav div a{
+  color: var(--main-color_2);
+  font-size: 1em;
+  font-weight: normal;
+}
+
+nav a:hover{
+  box-sizing: border-box;
+  border: 4px none var(--main-color);
+  border-right-style: solid;
+  background-color: var(--background-color_3);
+  transition-duration: 125ms;
+}
+
+/* style of tables */
+table {
+  border: 3px solid var(--background-color_3);
+  border-collapse: collapse;
+  color: var(--text-color);
+  font-family: "Open Sans", sans-serif;
+  overflow-x: auto;
+  text-align: center;
+  min-width: 960px;
+}
+
+th {
+  background-color: var(--background-color_3);
+  color: var(--heading-color);
+  font-weight: bold;
+  padding: 10px;
+}
+
+th div{
+  color: var(--main-color);
+}
+
+th div div{
+  color: var(--text-color);
+  font-weight: normal;
+}
+
+td {
+  background-color: var(--background-color);
+  border: 3px solid var(--background-color_3);
+  border-top: none;
+  border-bottom: none;
+  font-weight: normal;
+  padding: 5px;
+}
+
+tbody tr:nth-child(even) td{
+  background-color: var(--background-color_2);
+  border: 3px solid var(--background-color_3);
+  border-top: none;
+  border-bottom: none;
+}
+
+ul {
+  list-style-type: ">";
+  padding: 0;
+}
+
+li{
+  color: var(--text-color);
+  font-family: "Fira Code", sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.5em;
+  padding: 5px;
+}
+
+code{
+  background-color: var(--background-color_4);
+  color: var(--text-color);
+  font-family: "Fira Code";
+  font-size: 1em;
+  font-weight: normal;
+  width: 100%;
+}

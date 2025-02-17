@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/title.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="icon" type="image/png" sizes="48x48" href="./favicon.ico">
+    <script src="./js/nav.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <title>Bastion</title>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+    <img onclick="openNav()" class="menu_icon" src="./icons/menu_open.svg" />
+    <div id="mobile_nav">
+      <img
+        onclick="closeNav()"
+        class="menu_icon"
+        src="./icons/menu_close.svg"
+      />
+      <nav>
+        <p><a href="https://ashtreighlia.github.io/Bastion/">< home </a></p>
+        <p><a href="./rules.html">rules</a></p>
+        <p><a href="./banlist.html">ban list</a></p>
+      </nav>
+    </div>
+
+    <div id="fullscreen_nav">
+      <nav>
+        <p><a href="https://ashtreighlia.github.io/Bastion/">< home </a></p>
+        <p><a href="./rules.html">rules</a></p>
+        <p><a href="./banlist.html">ban list</a></p>
+        <div>
+          <p><a href="#champion">Champion bans</a></p>
+          <p><a href="#relic">Relic bans</a></p>
+          <p><a href="#incantation">Incantation bans</a></p>
+          <p><a href="#deck">Deck bans</a></p>
+        </div>
+      </nav>
+    </div>
+
+    <img src="./banner.png" alt="rules cover" />
+    <div class="lettering">
+      <h1>Bastion</h1>
+      <h6 class="sublettering">the ban list</h6>
+    </div>
+
+    <h2>Early development</h2>
+    <p>
+      Due to the early development stage of Bastion, there are no cards banned - yet.
+      If you find any cards that are too powerful or unfun to play against, please
+      let us know in the Discord server or via GitHub issues.
+    </p>
+
+    <h2 id="champion">Champion bans</h2>
+    <div
+      class="table"
+      x-data="{banned_spells: []}"
+      x-init="fetch('./banlists/champion.json')
+           .then(response => response.json())
+           .then(data => banned_spells = data)"
+    >
+      <table>
+        <tr>
+          <th>spell name</th>
+        </tr>
+        <template x-for="x in banned_spells">
+          <tr>
+            <td x-text="x"></td>
+          </tr>
+        </template>
+      </table>
+    </div>
+
+    <h2 id="relic">Relic bans</h2>
+    <div
+      class="table"
+      x-data="{banned_spells: []}"
+      x-init="fetch('./banlists/relic.json')
+           .then(response => response.json())
+           .then(data => banned_spells = data)"
+    >
+      <table>
+        <tr>
+          <th>spell name</th>
+        </tr>
+        <template x-for="x in banned_spells">
+          <tr>
+            <td x-text="x"></td>
+          </tr>
+        </template>
+      </table>
+    </div>
+    <h2 id="incantation">Incantation bans</h2>
+    <div
+      class="table"
+      x-data="{banned_spells: []}"
+      x-init="fetch('./banlists/incantation.json')
+           .then(response => response.json())
+           .then(data => banned_spells = data)"
+    >
+      <table>
+        <tr>
+          <th>spell name</th>
+        </tr>
+        <template x-for="x in banned_spells">
+          <tr>
+            <td x-text="x"></td>
+          </tr>
+        </template>
+      </table>
+    </div>
+    <h2 id="deck">Deck bans</h2>
+    <div
+      class="table"
+      x-data="{banned_spells: []}"
+      x-init="fetch('./banlists/deck.json')
+           .then(response => response.json())
+           .then(data => banned_spells = data)"
+    >
+      <table>
+        <tr>
+          <th>spell name</th>
+        </tr>
+        <template x-for="x in banned_spells">
+          <tr>
+            <td x-text="x"></td>
+          </tr>
+        </template>
+      </table>
+    </div>
+
+    <div class="footer">
+      <div class="version">
+        <h4>version</h4>
+        <p>alpha 1.0</p>
+      </div>
+    </div>
+  </body>
+</html>

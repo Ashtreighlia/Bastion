@@ -1,0 +1,138 @@
+body {
+  width: 100%;
+}
+
+h1 {
+  padding-top: 75px;
+}
+
+h3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+
+.parallax {
+  height: 100vh;
+}
+
+.background {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.art {
+  background-image: url(../banner.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.lettering {
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.sublettering {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.title {
+  font-size: 6rem;
+  text-shadow: 0 0 4rem var(--shadow);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 4rem 1rem 4rem 1rem;
+  background-color: var(--background-color_2);
+}
+
+.scroll_icon {
+  background-image: url(../icons/down.svg);
+  background-position: center 85%;
+  background-size: 5vmin;
+  opacity: 75%;
+
+  animation-name: wiggle;
+  animation-duration: 800ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes wiggle {
+  0% {
+    background-position: center 85%;
+  }
+  50% {
+    background-position: center 86%;
+  }
+  100% {
+    background-position: center 85%;
+  }
+}
+
+.content {
+  height: 100vh;
+  margin: auto;
+  max-width: 960px;
+}
+
+.intro{
+  background-color: var(--background-color_2);
+  display: flex;
+  flex-grow: 1;
+  gap: 25px;
+}
+
+.intro p {
+  background-color: var(--background-color_3);
+  padding: 25px 50px 25px 50px;
+  text-align: center;
+  width: auto;
+}
+
+.nav {
+  background-color: var(--background-color_2);
+  margin-top: 25px;
+  padding-top: 10px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding-bottom: 25px;
+  width: 100%;
+}
+
+.links a,.version {
+  background-color: var(--background-color_4);
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 25px 50px 25px 50px;
+  text-align: center;
+  width: auto;
+}
+
+.links a:hover {
+  background-color: var(--background-color_3);
+  outline: 4px solid var(--link-color);
+  transition-duration: 125ms;
+}
+
+.description {
+  background-color: var(--background-color_3);
+  padding: 25px 50px 25px 50px;
+  text-align: center;
+}

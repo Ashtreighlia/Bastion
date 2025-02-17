@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/title.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="icon" type="image/png" sizes="48x48" href="./favicon.ico">
+    <script src="./js/nav.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <title>Bastion</title>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+    <img onclick="openNav()" class="menu_icon" src="./icons/menu_open.svg" />
+    <div id="mobile_nav">
+      <img
+        onclick="closeNav()"
+        class="menu_icon"
+        src="./icons/menu_close.svg"
+      />
+      <nav>
+        <p><a href="https://ashtreighlia.github.io/Bastion/">< home </a></p>
+        <p><a href="./rules.html">rules</a></p>
+        <p><a href="./banlist.html">ban list</a></p>
+      </nav>
+    </div>
+
+    <div id="fullscreen_nav">
+      <nav>
+        <p><a href="https://ashtreighlia.github.io/Bastion/">< home </a></p>
+        <p><a href="./rules.html">rules</a></p>
+        <p><a href="./banlist.html">ban list</a></p>
+        <div>
+          <p><a href="#overlook">quick overview</a></p>
+          <p><a href="#construction">deck construction</a></p>
+          <p><a href="#Bastion">Bastion</a></p>
+          <p><a href="#rules">game rules</a></p>
+        </div>
+      </nav>
+    </div>
+
+    <img src="./banner.png" alt="rules cover" />
+    <div class="lettering">
+      <h1>Bastion</h1>
+      <h6 class="sublettering">the rules</h6>
+    </div>
+
+    <h2 id="overlook">Quick Overview</h2>
+    <p>
+      In Bastion, you build a compact yet powerful 50-card deck accompanied by
+      a champion, relic, and pact, which reside in the Bastion. These special
+      spells allow you to tailor your deck towards a specific strategy and
+      provide unique tactical options. The game is designed to be a fast-paced
+      experience, with a focus on the interplay between your bastion spells and
+      your deck.
+    </p>
+
+    <h2 id="Bastion">Bastion Mechanics</h2>
+    <p>
+      The Bastion is a special zone aside from your deck that houses your
+      Champion, Relic, and Pact. These spells are not directly part of your
+      library but are instead available to you from the start of the game.
+      Through casting your Bastion spells, you can shape the course of the
+      battle and gain a strategic edge over your opponent. However, each time a
+      Bastion piece is cast from the Bastion, their costs increase, forcing you
+      to carefully consider the timing and order of your plays in order to
+      maximize their impact.
+    </p>
+
+    <h3>Bastion Pieces</h3>
+    <ul>
+      <li>
+        <strong>Champion:</strong> A legendary creature that leads your deck
+        into battle, allowing you to build around its unique abilities or use it
+        as a standalone threat.
+      </li>
+      <li>
+        <strong>Relic:</strong> An artifact that supports your deck with its passive
+        effects or activated abilities, synergizing with your deck.
+      </li>
+      <li>
+        <strong>Pact:</strong> An enchantment that offers a powerful effect or
+        ongoing advantage, shaping the battlefield to your advantage.
+      </li>
+    </ul>
+    <p>
+      Your Relic and Pact may also be creatures.
+    </p>
+
+    <h3>Unified Tax</h3>
+    <ul>
+      <li>
+        <strong>Starting Tax:</strong> The unified tax for casting Bastion
+        spells from the Bastion starts out at 0.
+      </li>
+      <li>
+        <strong>Casting from Bastion:</strong> When you decide to cast your
+        Champion, Relic, or Pact from the Bastion, you must pay its base cost
+        and additionally the current unified tax (as colorless mana).
+      </li>
+      <li>
+        <strong>Tax Increase:</strong> Each time any of your Bastion spells
+        leave the Bastion, the unified tax increases by 1 for all future casts.
+        This cumulative tax forces you to think carefully about the order and
+        timing of your plays.
+      </li>
+    </ul>
+
+    <h4>Tax Example</h4>
+    <p>
+      Let's assume you cast your Champion first. As the current tax is 0, you
+      only pay its base cost, and increase the tax to 1. The next time you cast
+      any Bastion spell - be it your Relic or Pact - you'll need to pay its base
+      cost plus 1, then the tax increases to 2 for the subsequent cast.
+      This incremental cost continues to rise with each cast from the Bastion,
+      ensuring that even low-cost spells must be cast with care.
+    </p>
+
+    <h3>Recasting</h3>
+    <p>
+      If your Champion, Relic, or Pact would be put into the graveyard or be
+      exiled, you may instead choose to return it to the Bastion. This allows
+      you to recast your Bastion spells, but at an increased cost due to the
+      unified tax.
+    </p>
+
+    <h2 id="construction">Deck Construction</h2>
+    <ul>
+      <li>
+        <strong>Deck Size:</strong> Your deck consists of 50 cards (singleton,
+        aside from basic lands), including the Bastion spells.
+      </li>
+      <li>
+        <strong>Color Identity:</strong> The color identity of your deck is
+        determined by the combined color identities of your Champion, Relic, and
+        Pact. Every card in your deck must conform to this union.
+      </li>
+    </ul>
+
+    <h2 id="rules">To Long Didn't Read</h2>
+    <ul>
+      <li>
+        <strong>Deck Size:</strong> Your deck consists of 50 cards, including
+        the Bastion spells.
+      </li>
+      <li>
+        <strong>Color Identity:</strong> Your deck's color identity is
+        determined by the combined color identities of your Champion, Relic, and
+        Pact.
+      </li>
+      <li>
+        <strong>Bastion:</strong> Your Champion (legendary creature), Relic
+        (artifact), and Pact (enchantment) all start the game in the Bastion.
+      </li>
+      <li>
+        <strong>Unified Tax:</strong> Every time a spell is cast
+        from the Bastion, the unified tax increases by 1 for all subsequent
+        casts.
+      </li>
+      <li>
+        <strong>Recasting:</strong> If your Bastion spells would be put
+        into the graveyard or be exiled, you may instead return them to the
+        Bastion.
+      </li>
+      <li>
+        <strong>Starting Life:</strong> Each player begins the game with 20
+        life.
+      </li>
+    </ul>
+
+    <div class="footer">
+      <div class="version">
+        <h4>version</h4>
+        <p>alpha 1.0</p>
+      </div>
+    </div>
+  </body>
+</html>

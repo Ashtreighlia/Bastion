@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="icon" type="image/png" sizes="48x48" href="./favicon.ico" />
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <title>Bastion</title>
+  </head>
+
+  <body onload="document.body.style.opacity='1'">
+    <div class="parallax" id="parallax">
+      <div class="background art"></div>
+      <div class="background lettering">
+        <h1>Bastion</h1>
+        <h6 class="sublettering">intense, strategic, fast-paced</h6>
+      </div>
+      <div class="background scroll_icon" onclick="scrollDown()"></div>
+    </div>
+    <div class="content">
+      <h1 class="title">Welcome to Bastion</h1>
+      <div class="intro">
+        <p style="color: var(--heading-color)">
+          Bastion is a fresh, faster-paced spin on the Commander format for
+          Magic: The Gathering.
+        </p>
+        <p style="color: var(--text-color_2)">
+          In this variant, players harness three powerful spells from their
+          Bastion, which synergize seamlessly with their deck. Designed for
+          quick, high-impact games, Bastion captures the strategic depth of
+          Commander in a more time-efficient format. Enter a realm where classic
+          spells meet fresh strategic possibilities, and each game unfolds a
+          unique story shaped by your Champion's leadership, your Relic's
+          enduring power, and your Pact's tactical mastery. With streamlined
+          50-card decks and focused gameplay, every decision becomes crucial in
+          these fast-paced encounters.
+        </p>
+      </div>
+
+      <div class="nav">
+        <h3>subpages</h3>
+        <div class="links">
+          <a href="./rules.html">rules</a>
+          <a href="./banlist.html">ban list</a>
+        </div>
+      </div>
+
+      <div class="nav">
+        <h3>social</h3>
+        <p class="description">
+          Join the community and help shape the future of this format! Whether
+          through feedback, playtesting, or contributions on GitHub or Discord,
+          your voice matters. Get involved and help craft something amazing!
+        </p>
+        <div class="links">
+          <a
+            href="https://github.com/Ashtreighlia/Bastion"
+            target="_blank"
+            rel="noopener noreferrer"
+            >github</a
+          >
+          <a
+            href="https://discord.gg/tVqVGamknt"
+            target="_blank"
+            rel="noopener noreferrer"
+            >discord</a
+          >
+        </div>
+      </div>
+
+      <div class="nav">
+        <h4>version</h4>
+        <div class="links">
+          <p class="version" style="text-align: center">alpha 1.0</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/index.js"></script>
+</html>
